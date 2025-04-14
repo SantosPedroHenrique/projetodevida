@@ -1,13 +1,5 @@
-const botoes = document.querySelectorAll('.botao');
-const abas = document.querySelectorAll('.aba-conteudo');
-const imagemMeta = document.getElementById('imagem-meta');
-
-const imagens = [
-    'https://portalpne.com/wp-content/uploads/2025/03/1_whatsapp_image_2024_10_31_at_18_55_17-41170365.jpeg,' // Imagem para "Estudar Enem e Vestibulares"
-    'https://comunidadecloud.com/wp-content/uploads/2023/05/stairs-5957112_1280-min-1024x724-1.jpg,' // Imagem para "Trabalhar"
-    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRWa0vgqZAjjgwGSsTrZ4cl6qdo0MvP7sEpQ&s', // Imagem para "Praticar esportes"
-    'https://easyjur.com/blog/wp-content/uploads/2023/11/celebracao-formatura.png'  // Imagem para "Viajar e formar"
-];
+const botoes = document.querySelectorAll(".botao");
+const textos = document.querySelectorAll(".aba-conteudo");
 
 for (let i = 0; i < botoes.length; i++) {
     botoes[i].onclick = function () {
@@ -23,10 +15,10 @@ for (let i = 0; i < botoes.length; i++) {
 }
 
 const contadores = document.querySelectorAll(".contador");
-const tempoObjetivo1 = new Date("2025-10-20T00:00:00");
-const tempoObjetivo2 = new Date("2025-05-01T00:00:00");
-const tempoObjetivo3 = new Date("2025-12-31T00:00:00");
-const tempoObjetivo4 = new Date("2025-12-31T00:00:00");
+const tempoObjetivo1 = new Date("2023-10-05T00:00:00");
+const tempoObjetivo2 = new Date("2023-12-05T00:00:00");
+const tempoObjetivo3 = new Date("2023-12-30T00:00:00");
+const tempoObjetivo4 = new Date("2024-02-01T00:00:00");
 
 const tempos = [tempoObjetivo1, tempoObjetivo2, tempoObjetivo3, tempoObjetivo4];
 
