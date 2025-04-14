@@ -1,5 +1,13 @@
-const botoes = document.querySelectorAll(".botao");
-const textos = document.querySelectorAll(".aba-conteudo");
+const botoes = document.querySelectorAll('.botao');
+const abas = document.querySelectorAll('.aba-conteudo');
+const imagemMeta = document.getElementById('imagem-meta');
+
+const imagens = [
+    'https://portalpne.com/wp-content/uploads/2025/03/1_whatsapp_image_2024_10_31_at_18_55_17-41170365.jpeg,' // Imagem para "Estudar Enem e Vestibulares"
+    'https://comunidadecloud.com/wp-content/uploads/2023/05/stairs-5957112_1280-min-1024x724-1.jpg,' // Imagem para "Trabalhar"
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRWa0vgqZAjjgwGSsTrZ4cl6qdo0MvP7sEpQ&s', // Imagem para "Praticar esportes"
+    'https://easyjur.com/blog/wp-content/uploads/2023/11/celebracao-formatura.png'  // Imagem para "Viajar e formar"
+];
 
 for (let i = 0; i < botoes.length; i++) {
     botoes[i].onclick = function () {
@@ -56,28 +64,3 @@ function comecaCronometro() {
 }
 
 comecaCronometro();
-const botoes = document.querySelectorAll('.botao');
-const abas = document.querySelectorAll('.aba-conteudo');
-const imagemMeta = document.getElementById('imagem-meta');
-
-const imagens = [
-    'https://portalpne.com/wp-content/uploads/2025/03/1_whatsapp_image_2024_10_31_at_18_55_17-41170365.jpeg,' // Imagem para "Estudar Enem e Vestibulares"
-    'https://comunidadecloud.com/wp-content/uploads/2023/05/stairs-5957112_1280-min-1024x724-1.jpg,' // Imagem para "Trabalhar"
-    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRWa0vgqZAjjgwGSsTrZ4cl6qdo0MvP7sEpQ&s', // Imagem para "Praticar esportes"
-    'https://easyjur.com/blog/wp-content/uploads/2023/11/celebracao-formatura.png'  // Imagem para "Viajar e formar"
-];
-
-botoes.forEach((botao, index) => {
-    botao.addEventListener('click', () => {
-        // Remove a classe 'ativo' de todos os botões e abas
-        botoes.forEach(b => b.classList.remove('ativo'));
-        abas.forEach(a => a.classList.remove('ativo'));
-
-        // Adiciona a classe 'ativo' ao botão e aba clicados
-        botao.classList.add('ativo');
-        abas[index].classList.add('ativo');
-
-        // Atualiza a imagem da meta
-        imagemMeta.src = imagens[index];
-        imagemMeta.style.display = 'block'; // Exibe a imagem
-    });
